@@ -63,7 +63,7 @@ function calculateShipping(id, cep) {
 
 //Aguarda o carregamento completo do DOM
 document.addEventListener('DOMContentLoaded', function () {
-    const books = document.querySelector('.books'); //Seleciona o container onde os livros serão exibidos
+    const books = document.querySelector('.books'); 
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     console.log(id)
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then((book) => {
                 if (book) {
-                    books.appendChild(newBook(book)); // 👈 apenas 1 item
+                    books.appendChild(newBook(book)); 
 
                     document.querySelectorAll('.button-shipping').forEach((btn) => {
                         btn.addEventListener('click', (e) => {
